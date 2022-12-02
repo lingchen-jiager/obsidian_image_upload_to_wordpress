@@ -1,0 +1,29 @@
+'''
+更新时间：2022/12/02
+使用：
+1.将你的wordpress用户名，密码，域名填写到data.json文件中
+2.注意保证：所有引用的本地图片、md文件与这个py文件和data.json位于同一文件夹下。
+3.在data.json中填写wordpress域名的时候，填写”https://www.youdomin.com/index.php“或者”https://www.youdomin.com“，两个都试一下，不同版本的接口不一样
+原理：
+此工具将读取选择的md文件，发现所有特征像![[123.png]]的文本（jpg/gif格式也可以发现），
+然后将"123.png"上传到wordpress，
+并获取到wordpress上的url，假设是"https://yourwordpress.com/123.jpg"
+之后将![[123.png]]替换成![](https://yourwordpress.com/123.jpg)
+再重新写入到”replaced_test.md“文件中。
+这个工具转换后的文件可以用obsidian的第三方插件"wordpress"发布到你的wordpress网站。
+link：https://github.com/devbean/obsidian-wordpress
+***********************************************************
+Usage：
+1.Fill in your wordpress username, password, and domain name into the data.json file.
+2.Note that all referenced local images, md files, this py file and data.json are located in the same folder.
+3.When filling in the WordPress domain name in data.json, fill in "https://www.youdomin.com/index.php" or
+"https://www.yourdomin.com", if one fails, try the other.
+Principle：
+This tool will read the .md file that you choose and find all texts with features like ![[123.png]] (jpg/gif format can also be found),
+Then upload "123.png" to wordpress,
+And get the url on wordpress assuming it is "https://yourwordpress.com/123.jpg"
+Replace ![[123.png]] with ![](https://yourwordpress.com/123.jpg)
+Then rewrite it to the "replaced_test.md" file.
+The file converted by this tool can be published to your wordpress with obsidian's third-party plugin "wordpress".
+link: https://github.com/devbean/obsidian-wordpress
+'''
