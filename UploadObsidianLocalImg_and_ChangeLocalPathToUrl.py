@@ -5,7 +5,7 @@
 之后将![[123.png]]替换成![](https://yourwordpress.com/123.jpg)
 再重新写入到”replaced_test.md“文件中。
 
-另外默认所有本地图片都位于这个py文件的上层文件夹。
+另外默认所有本地图片、md文件与这个py文件位于同一文件夹下。
 这个工具转换后的文件可以用obsidian的第三方插件"wordpress"发布。
 link：https://github.com/devbean/obsidian-wordpress
 ***********************************************************
@@ -15,8 +15,8 @@ And get the url on wordpress assuming it is "https://yourwordpress.com/123.jpg"
 Replace ![[123.png]] with ![](https://yourwordpress.com/123.jpg)
 Then rewrite it to the "replaced_test.md" file.
 
-In addition, by default, all local pictures are located in the upper folder of this py file.
-Files converted by this tool can be published with obsidian's third-party plugin "wordpress".
+In addition, by default, all local pictures , this py file and md are located in a same folder. .
+The file converted by this tool can be published with obsidian's third-party plugin "wordpress".
 link: https://github.com/devbean/obsidian-wordpress
 '''
 
@@ -74,7 +74,7 @@ def upload_img(input_img_name): #传入的需要是当前文件夹下的jpg图�
 
 for i in md_jpg_list_striped:
     print(i)
-    upload_img("../"+i) #upload imgs，My pictures are located in the upper folder of the py file  这里是上传图片操作，默认图片位于py文件的上层文件夹
+    upload_img(+i) #upload imgs.Pictures,md and this py file are located in the same folder.  这里是上传图片操作，默认图片、md文件和py文件位于同一文件夹
 
 for i in range(len(md_jpg_list)):  #change ！[[123.png]] to ![](https://yourwordpress.com/123.png)
     print(md_jpg_list[i])
