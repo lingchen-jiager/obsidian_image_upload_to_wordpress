@@ -50,7 +50,12 @@ for i in file_list:
         md_list.append(i)
 if md_list == []:
     easygui.msgbox("This folder has no *.md file")
-    os.exit()
+    os._exit()
+elif len(md_list) == 1 :
+    yes_or_no = easygui.msgbox(msg=f'you want to convert this file?\n\n"{md_list[0]}"' , title='公众号:零晨的小工具箱')
+    if yes_or_no == None:
+        os._exit(0)
+    filename = md_list[0]
 else:
     filename  = easygui.choicebox(msg="please select the md file you want to convert",choices=md_list,title="公众号:零晨的小工具箱")  #获取当前选择的md文件
 
@@ -109,7 +114,7 @@ for i in range(len(md_jpg_list)):  #change ！[[123.png]] to ![](https://yourwor
     print(md_upload_img_url[i])
     md_content = md_content.replace(md_jpg_list[i], f"![]({md_upload_img_url[i]})")
 
-with open(f"replaced_{filename}.md",'w',encoding="utf-8")as fe:    #save to replaced_test.md 保存到新文件
+with open(f"replaced_{filename}",'w',encoding="utf-8")as fe:    #save to replaced_test.md 保存到新文件
     fe.write(md_content)
 
 easygui.msgbox("转换完成!\nFinished!")
