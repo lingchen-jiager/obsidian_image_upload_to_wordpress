@@ -1,6 +1,8 @@
 '''
 更新时间：2022/12/02
 使用：
+0.使用这个python脚本之前你必须先给你的wordpress安装插件"WordPress REST API Authentication"，如何设置见：
+https://github.com/lingchen-jiager/obsidian_image_upload_to_wordpress/blob/main/UploadObsidianLocalImg_and_ChangeLocalPathToUrl/set_plugin.md
 1.将你的wordpress用户名，密码，域名填写到data.json文件中
 2.注意保证：所有引用的本地图片、md文件与这个py文件和data.json位于同一文件夹下。
 3.在data.json中填写wordpress域名的时候，填写”https://www.youdomin.com/index.php“或者”https://www.youdomin.com“，两个都试一下，不同版本的接口不一样
@@ -14,6 +16,8 @@
 link：https://github.com/devbean/obsidian-wordpress
 ***********************************************************
 Usage：
+0.Before using this python script you must first install the plugin "WordPress REST API Authentication" for your WordPress. Refer to:
+https://github.com/lingchen-jiager/obsidian_image_upload_to_wordpress/blob/main/UploadObsidianLocalImg_and_ChangeLocalPathToUrl/set_plugin.md
 1.Fill in your wordpress username, password, and domain name into the data.json file.
 2.Note that all referenced local images, md files, this py file and data.json are located in the same folder.
 3.When filling in the WordPress domain name in data.json, fill in "https://www.youdomin.com/index.php" or
