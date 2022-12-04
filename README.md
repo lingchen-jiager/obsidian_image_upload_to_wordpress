@@ -7,6 +7,13 @@ This tool can upload jpg/gif/png ,of course **you can change the code to upload 
 
 For example,you can change "Content-Type"'s value to "video/mp4" to upload mp4.
 
+If you don't have the plugin "WordPress REST API Authentication" I said below, the username and password are the application name and password on the profile page.
+
+![english](https://user-images.githubusercontent.com/48639047/205488058-ce53d66b-c05d-4f21-a1ce-fde2aaaab1b6.png)
+
+If "WordPress REST API Authentication" is installed and Basic Authorization mode is used, the username and password are the administrator username and password.
+
+
 ### UploadObsidianLocalImg_and_ChangeLocalPathToUrl.py
 
 Upload the local image used in the md file to your wordpress and get the corresponding image url, replace the local link like ![[123.png]] with !\[]("https://xxx/123 .png").
@@ -34,6 +41,13 @@ You can refer to: https://github.com/winosli/Add-post-to-WordPress-with-rest-API
 upload_single_file.py这个文件可以上传单个文件，支持jpg/gif/png，当然你也可以修改代码来上传别的类型文件。
 
 比如把"Content-Type"的值改成"video/mp4"，就可以实现mp4的上传。
+
+用这个脚本上传文件，如果你没安装我下文说的插件“WordPress REST API Authentication”，用户名和密码不是wwordpress后台登陆密码，是在个人资料页面的应用程序名和密码。
+
+![应用程序密码](https://user-images.githubusercontent.com/48639047/205487855-018f8854-3056-42c3-98b8-992223850947.png)
+
+如果安装了“WordPress REST API Authentication”并且启用了Basic Authorization，那么用户名密码就是后台登陆密码。
+
 
 ### UploadObsidianLocalImg_and_ChangeLocalPathToUrl.py
 简单讲：将md文件中用到的本地图片传到你的wordpress并获取对应的图片url，将![[123.png]]这种本地链接替换为!\[]("https://xxx/123.png")这种形式。
