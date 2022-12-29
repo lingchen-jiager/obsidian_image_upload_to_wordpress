@@ -97,7 +97,7 @@ def upload_img(input_img_name): #传入的需要是当前文件夹下的jpg图�
     res = requests.post(media_url,
                                 data=data,
                                 headers={'Content-Type': content_type,
-                                         'Content-Disposition': 'attachment; filename=%s' % fileName},
+                                         'Content-Disposition': 'attachment; filename=%s' % fileName.encode('utf-8').decode("latin1")},  #加decode和encode是为了解决中文图片上传错误问题。
                                 auth=(yourusername, yourpassword))
     user = json.loads(res.text)
     # 获取上传的链接 get img url in your wordpress
